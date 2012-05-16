@@ -1,0 +1,31 @@
+h1. zbv-parser - The simple Zetaback Violator report parser.
+
+By Jared Koumentis
+
+h2. What it does.
+
+  * Hand it a plain text file in the format of a Zetaback violator report.
+  * Use the output to focus your work.
+
+h2. Why it exists.
+
+  * In my work, I have to review Zetaback violator reports. These are used to ensure our backups are up to date.
+  * Any backup that is "stale", that is older than 14 days, ends up in the report.
+  * The objective is to allow you to use the report and determine what you should look at and ensure that your backups are working properly.
+  * Unfortunately, the way it reports, it will not take into consideration that a Full backup is dependent on an Incremental that has not gone stale. However, it will still report the Full backup as "stale".
+  * These false positives suck and make my job harder. So, this exists to trim out these false positives.
+
+h2. How to use it.
+
+  * Call the program.
+  * Tell it where to find your Zetaback violator report.
+  * It will then parse your log, finding actual violations, and output a new file with the actual violators.
+  * Take care of the violators while enjoying the fact that you don't have to attempt to manually parse through all the false positives.
+
+h2. Requirements.
+
+  * Ruby ~> 1.9
+
+h2. License
+
+  * MIT license. See LICENSE for details.
