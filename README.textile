@@ -4,8 +4,8 @@ By Jared Koumentis
 
 h2. What it does.
 
-  * Hand it a plain text file in the format of a Zetaback violator report.
-  * Use the output to focus your work.
+  * Takes input of a plain text file in the format of a Zetaback violator report.
+  * Outputs only legit violators. (To allow you to focus on your work.)
 
 h2. Why it exists.
 
@@ -17,9 +17,8 @@ h2. Why it exists.
 
 h2. How to use it.
 
-  * Call the program.
-  * Tell it where to find your Zetaback violator report.
-  * It will then parse your log, finding actual violations, and output a new file with the actual violators.
+  * Call the program like "$ ruby zbv-parser.rb ./zetaback-report"
+  * It will then parse your log, finding actual violations, and output to your terminal with the actual violators.
   * Take care of the violators while enjoying the fact that you don't have to attempt to manually parse through all the false positives.
 
 h2. Requirements.
