@@ -40,9 +40,9 @@ def find_vio(blockarray)
 	# checks if violation date is >= 15 days in past.
 	if vio_date == nil
     return 0
-  elsif vio_date < (today - 14)
+  elsif vio_date < (today - 15)
 		puts vio_block
-	elsif vio_date > (today - 14)
+	elsif vio_date > (today - 15)
 		return 0
 	end
 end
